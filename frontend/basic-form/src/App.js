@@ -1,7 +1,9 @@
+import GreetingForm from "./components/GreetingForm";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">Hello from App!</header>
+      <GreetingForm />
     </div>
   );
 }
