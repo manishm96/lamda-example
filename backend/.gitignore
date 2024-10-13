@@ -2,5 +2,3 @@
 /node_modules
 /package-lock.json
 /.env
-/basic-greeting-app/node_modules
-/basic-greeting-app/.serverless
