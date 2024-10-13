@@ -17,6 +17,15 @@ functions:
       - httpApi:
           path: /hello
           method: get
+    cors:
+      allowedOrigins:
+        - "*"
+      allowedHeaders:
+        - Content-Type
+      allowedMethods:
+        - GET
+        - POST
+        - OPTIONS
 
 package:
   exclude:
