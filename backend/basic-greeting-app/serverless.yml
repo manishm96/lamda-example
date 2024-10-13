@@ -1,0 +1,29 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: manishpersonal
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: basic-greeting-app
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  region: us-east-1
+  stage: dev
+  environment:
+
+functions:
+  api:
+    handler: handler.handler
+    events:
+      - httpApi:
+          path: /hello
+          method: get
+
+package:
+  exclude:
+    - node_modules/aws-sdk/** # AWS SDK is included in Lambda by default
+    - .git/** # Exclude version control files
+    - .vscode/** # Exclude editor files
+    - tests/** # Exclude test files
+    - docs/** # Exclude documentation
+    - .DS_Store # Exclude macOS-specific files
+
