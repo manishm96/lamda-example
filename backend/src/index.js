@@ -1,3 +1,6 @@
+//Load evironment variables
+require("dotenv").config();
+
 //Importing utils file
 const { getTimeOfTheDay, constructGreeting } = require("./utils/utils");
 
